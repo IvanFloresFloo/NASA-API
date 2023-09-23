@@ -17,7 +17,7 @@ export default function App() {
       try {
         // Realizamos una solicitud HTTP a la API de la NASA
         const response = await axios.get(
-          "https://api.nasa.gov/planetary/apod?api_key=Twh8sx5cAbhMqW54ZDbhNqFXI3Ow0gUWPK7xXqqi"
+          "https://api.nasa.gov/planetary/earth/imagery?lon=-95.33&lat=29.78&date=2018-01-01&dim=0.15&api_key=Twh8sx5cAbhMqW54ZDbhNqFXI3Ow0gUWPK7xXqqi"
         );
         // Actualizamos el estado nasaData con los datos obtenidos
         setNasaData(response.data);
@@ -86,7 +86,7 @@ export default function App() {
 
       {/* Pie de página con información del desarrollador e instituto */}
       <Text style={styles.footer}>
-         Ivan Flores | Quinto ciclo | Instituto Superior Tecnologico Nuestra Señora del Rosario
+        Desarrollado por Edilson Guillin | Quinto ciclo | Materia: Aplicaciones Móviles II | Instituto Nuestra Señora del Rosario
       </Text>
 
       {/* Barra de estado */}
